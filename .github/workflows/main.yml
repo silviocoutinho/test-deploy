@@ -36,4 +36,6 @@ jobs:
         SECRETHUB_CREDENTIAL: ${{ secrets.DEPLOY_PROJECT }}      
     
       run: |
-        echo ${{ secrets.DEPLOY_PROJECT }}
+        touch .env
+        echo ENV:${{ secrets.DEPLOY_PROJECT }} >> .env
+        cat. env
