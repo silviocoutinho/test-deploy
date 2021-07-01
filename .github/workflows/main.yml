@@ -31,4 +31,10 @@ jobs:
     - name: Start PM2
       run: pm2 start index.js --name testdeploy
     
-     
+    - uses: secrethub/actions/env-export@v0.1.0
+      env:
+        SECRETHUB_CREDENTIAL: ${{ secrets.DEPLOY_PROJECT }}  
+    
+    - name: Publish Value
+      run: |
+        echo "$SECRETHUB_CREDENTIAL" 
