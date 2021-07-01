@@ -33,8 +33,7 @@ jobs:
     
     - name: Secrets Test
       env:
-        SECRETHUB_CREDENTIAL: ${{ secrets.DEPLOY_PROJECT }}  
+        SECRETHUB_CREDENTIAL: ${{ secrets.DEPLOY_PROJECT }}      
     
-    - name: Publish Value
       run: |
         echo "$SECRETHUB_CREDENTIAL" 
