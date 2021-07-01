@@ -36,4 +36,4 @@ jobs:
         SECRETHUB_CREDENTIAL: ${{ secrets.DEPLOY_PROJECT }}      
     
       run: |
-        echo "$SECRETHUB_CREDENTIAL" 
+        echo ${{ secrets.DEPLOY_PROJECT }}
